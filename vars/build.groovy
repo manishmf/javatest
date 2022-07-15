@@ -3,7 +3,7 @@ def call(name){
 }
 def build(dockerImageName)
     {
-        sh "docker build -t ${dockerImageName}"
+        sh "docker build -t ${dockerImageName} ."
         echo "Image Got Build ${dockerImageName}"
     }
 
