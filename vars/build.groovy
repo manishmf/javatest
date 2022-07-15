@@ -1,13 +1,16 @@
-def call(name){
-    echo "Hey ${name}, How are you"
-}
 def build(dockerImageName)
     {
         pwd
         sh "docker build -t ${dockerImageName} ."
         echo "Image Got Build ${dockerImageName}"
+        sh "docker image"
     }
 
+def run(dockerImageName)
+{
+    sh "docker run -dit ${dockerImageName}"
+    sh "docker ps -a"
+}
 
 
 def dockerPush()
