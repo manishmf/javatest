@@ -1,7 +1,7 @@
 def call(name){
     echo "Hey ${name}, How are you"
 }
-def Build()
+def build(dockerImageName)
     {
         sh "docker build -t ${dockerImageName}"
         echo "Image Got Build ${dockerImageName}"
