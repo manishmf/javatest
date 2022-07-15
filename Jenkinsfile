@@ -5,11 +5,19 @@ pipeline{
     stages {
         stage('build') {
             steps{
-                build("manish tiwari")
-                script {
+              script {
                   pwd
                   build.build("test")
                 }
+            }
+        }
+         stage('run') {
+            steps{
+                 script {
+                  pwd
+                  build.run("test")
+                }
+               
             }
         }
     }
